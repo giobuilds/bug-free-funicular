@@ -3,11 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electron App</title>
+    <title>BFF System Dashboard</title>
 </head>
 <body>
-    <p>Hello Electron!</p>
-    <p id="info"></p>
+    <section>
+        <h1>Resources</h1>
+        <h2><img src="../assets/arrow-next.svg" alt="close-open" style="width: 2%;" class="open-close" /> CPU</h2>
+        <h2><img src="../assets/arrow-next.svg" alt="close-open" style="width: 2%;" class="open-close" /> Memory and Swap</h2>
+        <div>
+            <p>Memory</p>
+        </div>
+        <div>
+            <p>Swap</p>
+        </div>
+        <h2><img src="../assets/arrow-next.svg" alt="close-open" style="width: 2%;" class="open-close" /> Network</h2>
+        <div>
+            <div>
+                <img src="../assets/green-arrow.svg" alt="download" style="width: 2%;" />
+                <p>Receiving...</p>
+            </div>
+            <div>
+                <img src="../assets/red-arrow.svg" alt="upload" style="width: 2%;" />
+                <p>Sending...</p>
+            </div>
+        </div>
+        <h2><img src="../assets/arrow-next.svg" alt="close-open" style="width: 2%;" class="open-close" /> Disk</h2>
+        <div>
+            <div>
+                <img src="../assets/green-arrow.svg" alt="download" style="width: 2%;" />
+                <p>Reading...</p>
+            </div>
+            <div>
+                <img src="../assets/red-arrow.svg" alt="upload" style="width: 2%;" />
+                <p>Writing...</p>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h1>Processes</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>CPU</th>
+                <th>Memory</th>
+                <th>Disk Read</th>
+                <th>Disk Write</th>
+            </tr>
+            <tr>
+                <td>Electron</td>
+                <td>12345</td>
+                <td>0.5 %</td>
+                <td>37 MiB</td>
+                <td> - </td>
+                <td> - </td>
+            </tr>
+        </table>
+    </section>
+    
+    <section>
+        <h1>File Systems</h1>
+        <table>
+            <tr>
+                <th>Device</th>
+                <th>Directory</th>
+                <th>Type</th>
+                <th>Total</th>
+                <th>Available</th>
+                <th>Used</th>
+            </tr>
+            <tr>
+                <td>/dev/sda</td>
+                <td>/</td>
+                <td>ext4</td>
+                <td>100 GiB</td>
+                <td>45 GiB</td>
+                <td>55 GiB</td>
+            </tr>
+        </table>
+    </section>
+    
+
 </body>
-<script src="./renderer.js"></script>
 </html>
