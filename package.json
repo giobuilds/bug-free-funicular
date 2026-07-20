@@ -4,12 +4,31 @@
   "description": "Electron app that displays the computer's system information",
   "main": "src/main.js",
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "postinstall": "patch-package"
   },
   "author": "Giovanni Dick",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^43.1.1"
+    "@electron-forge/cli": "^7.11.2",
+    "@electron-forge/maker-deb": "^7.11.2",
+    "@electron-forge/maker-dmg": "^7.11.2",
+    "@electron-forge/maker-rpm": "^7.11.2",
+    "@electron-forge/maker-squirrel": "^7.11.2",
+    "@electron-forge/maker-zip": "^7.11.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.11.2",
+    "@electron-forge/plugin-fuses": "^7.11.2",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^43.1.1",
+    "patch-package": "^8.0.1"
+  },
+  "dependencies": {
+    "dpkg": "^1.0.0",
+    "electron-squirrel-startup": "^1.0.1",
+    "tar": "^7.5.20",
+    "tmp": "^0.2.7"
   }
 }
