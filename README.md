@@ -4,4 +4,4 @@
 
 Electron app that displays the computer's system information.
 
-Bootstrap for UI
+Bootstrap for the UI.
